@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h5 {
+  font-weight: 300;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.95rem;
+  font-weight: lighter;
+  text-align: left;
+  padding: 1rem;
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+header h5 {
+  color: #000000;
+  background-color: #d1891c;
+  padding: 0.2rem 1rem;
+}
+header h1 {
+  color: #ffffff;
+  background-color: #00669f;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+/* MAIN */
+
+main {
+  padding: 8rem 1rem 3rem;
+  text-align: center;
+}
+
+.cards__container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 44rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #f3f3f3;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  max-width: 20rem;
+}
+
+.card__header {
+  position: relative;
+}
+
+.card__header__bg {
+  background-image: url('../img/bg-batman.png');
+  background-position: center;
+  background-size: cover;
+  min-height: 10rem;
+}
+
+.card__header__profile-img {
+  position: absolute;
+  max-width: 8rem;
+  border-radius: 50%;
+  left: calc(50% - 4rem);
+  bottom: -4rem;
+}
+
+.card__header__heart-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  margin: 1rem;
+}
+
+.card__bg--batman {
+  background-image: url('../img/bg-batman.png');
+}
+.card__bg--maravilla {
+  background-image: url('../img/bg-maravilla.png');
+}
+.card__bg--superman {
+  background-image: url('../img/bg-superman.png');
+}
+.card__bg--harley {
+  background-image: url('../img/bg-harley.png');
+}
+
+.card,
+.card__header__bg {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card__content {
+  flex: 1 1 auto;
+  margin-top: 3rem;
+}
+
+button {
+  font-weight: 300;
+  font-size: 0.8rem;
+  background-color: #00669f;
+  color: #f3f3f3;
+  padding: 1.2em 3.2em;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover,
+.plus-circle:hover {
+  background-color: #014e7b;
+}
+
+.plus-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00669f;
+  color: #f3f3f3;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 1.2rem);
+  right: -1rem;
+  cursor: pointer;
+}
+
+.plus-circle span {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  color: #ffffff;
+  background-color: #00669f;
+  padding: 1rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.footer__img {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  text-align: end;
+}
+
+.footer__img img {
+  max-width: 7rem;
+}
+
+/* MEDIAS */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .cards__container {
+    max-width: 40rem;
+  }
+
+  .card {
+    max-width: 22rem;
+  }
+
+  .footer__img {
+    top: 1.7rem;
+  }
+  .footer__img img {
+    max-width: 6rem;
+  }
+
+  .card:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .cards__container {
+    max-width: 40rem;
+  }
+
+  .card {
+    max-width: 22rem;
+  }
+
+  .footer__img {
+    position: static;
+    text-align: center;
+  }
+  .footer__img img {
+    max-width: 6rem;
+  }
+
+  .card:nth-child(4) {
+    display: none;
+  }
+}
